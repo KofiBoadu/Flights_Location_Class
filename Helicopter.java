@@ -43,8 +43,11 @@ public class Helicopter {
 
             System.out.println("You can not fly to"+" "+ final_destination.getLocation_name() + "\n You do not have enough fuel");
         }
-        else {
+        else if (distance < current_fuel/miles_perGallon && final_destination.isHas_gas()== false){
+                System.out.println("There is no gas at this location and can not fly to ");
+            }
 
+        else {
             System.out.println("You successfully flew  to "+ " "+final_destination.getLocation_name() );
         }
 
